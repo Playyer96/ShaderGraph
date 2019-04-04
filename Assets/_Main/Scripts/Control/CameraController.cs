@@ -4,13 +4,14 @@ public class CameraController : MonoBehaviour {
 
   #region Private Components
   private new Camera camera;
-  private new Transform Transform;
+  private new Transform transform;
 
   [SerializeField] private CamVariables camVariables;
   #endregion
 
   private void Awake () {
-
+    transform = GetComponent<Transform> ();
+    camera = Camera.main;
   }
   private void Start () {
 
